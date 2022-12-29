@@ -1,6 +1,6 @@
 
 import React, { useState , useEffect} from 'react'
-import { Link, Navigate } from "react-router-dom"
+import { Navigate } from "react-router-dom"
 
 
 const Checkout = ({ CartItem }) => {
@@ -27,7 +27,7 @@ const Checkout = ({ CartItem }) => {
       if (Object.keys(formErrors).length === 0 && isSubmit) {
         console.log(formValues);
       }
-    }, [formErrors]);
+    }, [formErrors, formValues, isSubmit]);
     const validate = (values) => {
       const errors = {};
       if (!values.firstname) {
